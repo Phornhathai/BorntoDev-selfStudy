@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIV</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+        }
+        .red{
+            background-color: red;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+
+        .row{
+            display: flex;
+        }
+
+        .column{
+            flex: 1;
+            padding: 20px;
+        }
+
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(100px ,1fr));
+            grid-gap: 20px;
+        }
+
+        .grid-item{
+            background-color: lightblue;
+            padding: 20px;
+        }
+        .navbar a{
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+
+        .navbar a:hover{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: aqua; padding: 20px;">
+        this is a basic div
+    </div>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="row">
+        <div class="column box red">column 1</div>
+        <div class="column box blue">column 2</div>
+        <div class="column box red">column 3</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+    </div>
+    
+</body>
+</html>
